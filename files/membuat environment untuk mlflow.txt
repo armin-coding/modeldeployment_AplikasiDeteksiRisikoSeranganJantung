@@ -1,0 +1,58 @@
+MEMBUAT ENV
+py -m venv mlflow_env
+
+ACTIVATE
+.\mlflow_env\Scripts\activate
+
+INSTALL YANG DIBUTUHKAN
+pip install pandas scikit-learn matplotlib seaborn mlflow
+
+RUN PIPELINE
+py pipeline.py
+
+atau run aja filenya manual
+
+
+KALAU MAU LIAT MLFLOW
+mlflow ui
+or
+py -m mlflow ui
+
+
+TP (True Positive) → orang benar-benar sakit, model bilang sakit
+
+TN (True Negative) → orang tidak sakit, model bilang tidak sakit
+
+FP (False Positive) → orang tidak sakit, model bilang sakit
+
+FN (False Negative) → orang sakit, model bilang tidak sakit
+
+accuracy
+0.8688524590163934
+precision
+0.8571428571428571
+recall
+0.9090909090909091
+f1_score
+0.8823529411764706
+
+
+Recall = TP / (TP + FN)
+Dari yang terprediksi bener dan memang bener, persentase ditangkap model
+
+Precision = TP / (TP + FP)
+Dari semua yang model bilang bener, persentase bener
+
+F1-Score
+Keseimbangan precision & recall
+
+
+Recall
+90.9% pasien sakit terdeteksi
+9.1% pasien sakit tidak terdeteksi
+
+Precision
+Dari semua pasien yang diprediksi heart attack oleh model, 85.7% benar-benar heart attack.
+
+F1 Score
+Nilai 0.882 berarti model cukup balanced.
